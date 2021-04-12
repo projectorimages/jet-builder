@@ -1,0 +1,3 @@
+[submodule "projector-docker"]
+	path = projector-docker
+	url = https://github.com/JetBrains/projector-docker.git
