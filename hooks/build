@@ -1,3 +1,12 @@
 #!/bin/bash
 
-DOCKER_BUILDKIT=${DOCKER_BUILDKIT} docker build -f projector-docker/Dockerfile -t ${IMAGE_NAME} --build-arg buildGradle=true --build-arg downloadUrl=${downloadPrefix}/${SOURCE_BRANCH}.tar.gz .
+# Multiple tags handled by Nathan Vaughn (https://blog.nathanv.me/posts/docker-hub-multiple-tags/)
+IFS=',' read -ra tags <<< "$DOCKER_TAG"
+TAG_COMMAND=""
+
+for tag in "${tags[@]}"
+do
+    TAG_COMMAND="$TAG_COMMAND -t $DOCKER_REPO:$tag"
+done
+
+DOCKER_BUILDKIT=1 docker build -f projector-docker/Dockerfile --build-arg buildGradle=true --build-arg downloadUrl=${downloadPrefix}/${SOURCE_BRANCH}.tar.gz ${TAG_COMMAND} .
