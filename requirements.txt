@@ -1,0 +1,2 @@
+docker-registry-client==0.5.2
+semantic-version==2.8.5
