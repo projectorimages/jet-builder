@@ -1,5 +1,7 @@
 name: Update submodules to new releases
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '45 23 * * *'
 jobs:
   # The job is taken from Artru (https://stackoverflow.com/questions/64407333/using-github-actions-to-automatically-update-the-repos-submodules)
   sync:
