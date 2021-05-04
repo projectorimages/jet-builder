@@ -15,7 +15,8 @@ ide_repos = {
     "CL": "projector-clion",
     "GO": "projector-goland",
     "WS": "projector-webstorm",
-    "DG": "projector-datagrip"
+    "DG": "projector-datagrip",
+    "PS": "projector-phpstorm"
 }
 
 organization = "projectorimages"
