@@ -25,7 +25,7 @@ jobs:
   build-image:
     needs: check-versions
     runs-on: ubuntu-latest
-    if: ${{ needs.check-versions.outputs.image-matrix != '[]' }}
+    if: ${{ needs.check-versions.outputs.image-matrix != '{''include'':[]}' }}
     strategy:
       matrix: ${{ fromJson(needs.check-versions.outputs.image-matrix) }}
     steps:
