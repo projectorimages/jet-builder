@@ -5,7 +5,7 @@ These images are created using the [projector-docker](https://github.com/JetBrai
 There are images for the following IDEs:
 
 * [IntelliJ IDEA Community](https://hub.docker.com/repository/docker/projectorimages/projector-idea-c)
-* [IntelliJ IDEA Ultimate](https://hub.docker.com/repository/docker/projectorimages/projector-idea-c)
+* [IntelliJ IDEA Ultimate](https://hub.docker.com/repository/docker/projectorimages/projector-idea-u)
 * [PyCharm Community](https://hub.docker.com/repository/docker/projectorimages/projector-pycharm-c)
 * [PyCharm Professional](https://hub.docker.com/repository/docker/projectorimages/projector-pycharm-p)
 * [WebStorm](https://hub.docker.com/repository/docker/projectorimages/projector-webstorm)
